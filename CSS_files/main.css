@@ -1,0 +1,745 @@
+    .new * {
+        all: revert;
+    }
+    
+    .ND-Box {
+        display: block;
+        background-color: rgb(52, 53, 124);
+        color: white;
+        margin: auto;
+        border-radius: 10px;
+        padding: 2px;
+        text-align: center;
+    }
+    
+    .tab {
+        margin-left: 5%;
+    }
+    
+    .toolInfo {
+        display: block;
+        float: left;
+        width: 51%;
+        /*background-color: rgb(230, 236, 249);
+        border-radius: 10px;*/
+        padding: 2%;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    
+    .importantText {
+        /*color: rgb(28, 29, 86);*/
+        font-weight: 1000;
+    }
+    
+    .info {
+        height: 100%;
+    }
+    
+    .generalInfo {
+        display: block;
+        float: right;
+        width: 47%;
+        /*background-color: rgb(230, 236, 249);
+        border-radius: 10px;*/
+        padding: 2%;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    
+    .infoText {
+        color: black;
+        font-size: 15;
+        text-align: left;
+    }
+    
+    .infoHeader {
+        color: rgb(28, 29, 86);
+        font-weight: normal;
+        font-size: 24;
+        font-family: sans-serif;
+        text-align: left;
+    }
+    
+    #quiz {
+        display: block;
+        float: right;
+        margin-top: 5px;
+        background: #ebf0f8;
+        padding: 15px 20px 28px 20px;
+        width: 33%;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    #discount {
+        display: block;
+    }
+    
+    #discount-dropdown {
+        width: 97%;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(99, 99, 99);
+        border: none;
+        padding: 2px;
+    }
+    
+    #textbox {
+        display: inline;
+        height: 20px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
+        padding-left: 5px;
+        width: 20%;
+    }
+    
+    .popupLink {
+        cursor: help;
+    }
+    
+    .popup:after {
+        content: "?";
+        display: inline-block;
+        margin-left: 0.2em;
+        color: white;
+        background: #0c2340;
+        text-align: center;
+        vertical-align: super;
+        padding: 0.15em 0.55em;
+        font-size: 0.5em;
+        font-family: "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+        border-radius: 1em;
+    }
+    
+    .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    /* The actual popup */
+    
+    .popup .popuptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+    }
+    /* Popup arrow */
+    
+    .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+    /* Toggle this class - hide and show the popup */
+    
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+    }
+    /* Add animation (fade in the popup) */
+    
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    /* .imperviousDef {
+        visibility: hidden;
+        opacity: 0;
+        transition: display 0s, opacity 0.5s linear;
+        border-radius: 8px;
+        text-align: center;
+        position: absolute;
+        z-index: 999;
+        width: 28%;
+    }
+    
+    .imperviousDef .popupText {
+        color: white;
+        font-size: 11px;
+        padding: 2px 2px 2px 2px;
+    } */
+    /* .imperviousSurfaces {
+        color: rgb(16, 17, 68);
+        font-weight: bold;
+    } */
+    /* .imperviousSurfaces:hover~div[class="imperviousDef"] {
+        visibility: visible;
+        background-color: rgb(52, 53, 124);
+        opacity: 100%;
+    }
+    
+    .imperviousSurfaces:hover {
+        color: #bd222e;
+        transition-duration: 0.5s;
+    } */
+    
+    b.questions {
+        line-height: 1.5;
+    }
+    
+    .mcanswers {
+        line-height: 0.9;
+    }
+    
+     ::placeholder {
+        color: gray;
+        font-size: 12px;
+        opacity: 85%;
+    }
+    
+    .mc {
+        text-align: default;
+        margin-left: 20px;
+    }
+    
+    #button {
+        background: #bd222e;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        transition-duration: .5s;
+        margin-top: 15px;
+        margin-left: 25%;
+    }
+    
+    #button:hover {
+        background: white;
+        border: 1px solid #bd222e;
+        color: black;
+        cursor: pointer;
+    }
+    
+    #alert {
+        display: none;
+        float: right;
+        background: #bd222e;
+        padding: 10px 20px 10px 20px;
+        width: 32%;
+        border-radius: 10px;
+        font-size: 16px;
+        color: white;
+        margin-left: 70%;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .resultsSummaryTitle {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        font-family: arial black;
+    }
+    
+    #resultsID {
+        display: none;
+    }
+    
+    .ResultsSummaryInfo {
+        border: none;
+        padding: 10px 20px 10px 10px;
+        padding-right: 10px;
+        width: 31%;
+        float: left;
+        margin-top: 30px;
+        margin-bottom: 8px;
+        background-color: #ebf0f8;
+        border-radius: 5px;
+        /* background-color: #bd222e; 
+        border-width: 5px;
+        border-style: solid;
+        border-color: rgb(28, 29, 86);
+        */
+        position: -webkit-sticky;
+        position: sticky;
+        top: 10px;
+    }
+    
+    .resultsdisclaimer {
+        font-size: 10px;
+        font-weight: bold;
+        color: black;
+        text-align: left;
+    }
+    
+    .sticky {
+        top: 0;
+        position: fixed;
+    }
+    
+    .resultsSummaryText {
+        font-size: 16px;
+        float: left;
+        color: black;
+        line-height: 1.5;
+        text-align: left;
+        font-weight: none;
+        padding-bottom: 0%;
+    }
+    
+    .optiontitle {
+        font-size: 25px;
+        font-weight: bold;
+        text-align: left;
+        color: #555;
+        font-family: arial black;
+    }
+    
+    .variationsHeader {
+        display: none;
+        font-size: 19px;
+        font-weight: bold;
+        text-align: left;
+        color: #555;
+        font-family: arial black;
+    }
+    
+    .novariations {
+        display: none;
+    }
+    
+    .hasvariations {
+        display: block;
+    }
+    
+    .Variations {
+        all: revert;
+        float: right;
+        text-align: left;
+        color: #555;
+        line-height: normal;
+        width: 70%;
+    }
+    
+    .Variations div {
+        display: none;
+        margin: 0;
+    }
+    
+    .directions {
+        all: revert;
+        text-align: left;
+        font-size: 12px;
+        color: rgb(28, 29, 86);
+        font-family: arial black;
+    }
+    
+    .button {
+        background: wheat;
+        border: none;
+        color: tomato;
+        text-align: center;
+        font-size: 14px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 2px;
+        width: 50px;
+        padding: 10px;
+    }
+    
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+    
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        transition: 0.5s;
+    }
+    
+    .button:hover span {
+        padding-right: 15px;
+    }
+    
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+    
+    .ResultsTabs {
+        overflow: hidden;
+        border: 2px solid #bd222e;
+        background-color: #bd222e;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        max-width: 100%;
+    }
+    
+    .ResultsTabs button {
+        background-color: inherit;
+        float: center;
+        outline-style: solid;
+        outline-color: #bd222e;
+        /* border: 1px solid white;*/
+        cursor: pointer;
+        padding: 10px 12px;
+        width: 49.75%;
+        transition: 0.3s;
+        opacity: 100%;
+    }
+    
+    .ResultsTabs .AboutTab:hover {
+        background: white;
+        /*border: 1px solid #bd222e;*/
+        color: black;
+        cursor: pointer;
+    }
+    
+    .ResultsTabs .AboutTab.active {
+        background: white;
+        /* border: 1px solid #bd222e;*/
+        color: black;
+        cursor: pointer;
+    }
+    
+    .ResultsTabs .MoreInfoTab:hover {
+        background: white;
+        /*border: 1px solid #bd222e;*/
+        color: black;
+        cursor: pointer;
+    }
+    
+    .ResultsTabs .MoreInfoTab.active {
+        background: white;
+        /*border: 1px solid #bd222e;*/
+        color: black;
+        cursor: pointer;
+    }
+    
+    .GSIimage {
+        margin: 20px 5px 30px 5px;
+        height: 180px;
+        width: 180px;
+        border-radius: 5%;
+        opacity: 100%;
+        float: left;
+    }
+    
+    .AboutText {
+        font-size: 16px;
+        display: block;
+        float: right;
+        color: #555;
+        padding-top: 15px;
+        width: 70%;
+        line-height: 1.2;
+        text-align: left;
+        font-weight: none;
+    }
+    
+    .CostInfoText {
+        display: none;
+        float: right;
+        font-size: 16px;
+        padding-top: 15px;
+        width: 70%;
+        line-height: 1.2;
+        text-align: left;
+        color: #555;
+    }
+    
+    .GSIlink {
+        color: #d16971;
+        font-weight: bold;
+    }
+    
+    .GSIoption {
+        padding: 10px 20px 10px 20px;
+        width: 66%;
+        float: right;
+        margin-right: 2%;
+        /*border: black 4px;
+        background: #d16971;
+        border-radius: 20px;*/
+    }
+    
+    #VegetativeInfiltrationID {
+        display: none;
+    }
+    
+    #DryWellsID {
+        display: none;
+    }
+    
+    #PermeablePavementID {
+        display: none;
+    }
+    
+    #NonvegetativeInfiltrationID {
+        display: none;
+    }
+    
+    #RainbarrelsCisternsID {
+        display: none;
+    }
+    
+    #GreenRoofsID {
+        display: none;
+    }
+    
+    #InfiltrationChamberID {
+        display: none;
+    }
+    
+    #RainGardensSubmit {
+        display: none;
+    }
+    
+    #RainGardensSubmit h1,
+    #RainGardensSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #RainGardensSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+    }
+    
+    #RainGardensSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+        font-style: normal;
+    }
+    
+    #TreeBoxesSubmit {
+        display: none;
+    }
+    
+    #TreeBoxesSubmit h1,
+    #TreeBoxesSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #TreeBoxesSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+    }
+    
+    #TreeBoxesSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+        font-style: normal;
+    }
+    
+    #DryWellsSubmit {
+        display: none;
+    }
+    
+    #PorousPavementSubmit {
+        display: none;
+    }
+    
+    #GrassPaversSubmit {
+        display: none;
+    }
+    
+    #PermeableUnitPaversSubmit {
+        display: none;
+    }
+    
+    #InfiltrationChamberSubmit {
+        display: none;
+    }
+    
+    #SurfaceDetentionSubmit {
+        display: none;
+    }
+    
+    #BioretentionSubmit {
+        display: none;
+    }
+    
+    #InfiltrationBasinSubmit {
+        display: none;
+    }
+    
+    #InfiltrationTrenchSubmit {
+        display: none;
+    }
+    
+    #VegetativeSwaleSubmit {
+        display: none;
+    }
+    
+    #VegetativeFilterStripSubmit {
+        display: none;
+    }
+    
+    #VegetativeFilterStripSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #VegetativeFilterStripSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+    }
+    
+    #VegetativeFilterStripSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+        font-style: normal;
+    }
+    
+    #GreenRoofSubmit {
+        display: none;
+    }
+    
+    #GreenRoofSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #GreenRoofSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+    }
+    
+    #GreenRoofSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+        font-style: normal;
+    }
+    
+    #UndergroundDetentionSubmit {
+        display: none;
+    }
+    
+    #UndergroundDetentionSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #UndergroundDetentionSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+    }
+    
+    #UndergroundDetentionSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+        font-style: normal;
+    }
+    
+    #ConstructedWetlandSubmit {
+        display: none;
+    }
+    
+    #ConstructedWetlandSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #ConstructedWetlandSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+    }
+    
+    #ConstructedWetlandSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+        font-style: normal;
+    }
+    
+    #WetPondSubmit {
+        display: none;
+    }
+    
+    #WetPondSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #WetPondSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+    }
+    
+    #WetPondSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+        font-style: normal;
+    }
+    
+    #RainBarrelsCisternsSubmit {
+        display: none;
+    }
+    
+    #RainBarrelsCisternsSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #RainBarrelsCisternsSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+    }
+    
+    #RainBarrelsCisternsSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: #555;
+        font-style: normal;
+    }
+    
+    #link {
+        color: #bd222e;
+    }
